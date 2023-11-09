@@ -17,14 +17,26 @@ body {
     background-color: white;
 }
 
-.scoreboard{
-    padding: 5px;
-    margin: 2px;
-    background-color: none;
-    justify-content: center;
-    align-items: center;
+.player1 {
+    padding: 15px;
+    background-color: lightcoral;
+    margin: 25px;
+    display: inline-block;
 }
- #player1{
-    text-align: center;
-    border: solid 3px black;
- }
+
+.player1 p:nth-child(1){
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+.player2 {
+    padding: 15px;
+    background-color: lightblue;
+    margin: 25px;
+    display: inline-block;
+}
+
+.player2 p:nth-child(1){
+    font-size: 10px;
+    text-decoration: underline;
+}
