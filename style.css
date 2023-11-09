@@ -43,18 +43,20 @@ body {
 
 .keypad
 {
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
+    border: 5px solid black;
     border-collapse: collapse;
 }
 
-.button
+.buttons
 {
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
+    border: 5px solid black;
     font-size: 30px;
     min-width: 50px;
     min-height: 50px;
+}
+.buttons button {
+    padding: 5px;
+    content: "";
+    height: 80px;
+    width: 80px;
 }
