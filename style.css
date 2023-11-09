@@ -51,20 +51,23 @@ body {
 
 .keypad
 {
-    border: 5px solid black;
+    border: 2px solid black;
     border-collapse: collapse;
 }
 
 .buttons
 {
-    border: 5px solid black;
+    padding: 15px;
+    border: 2px solid black;
     font-size: 30px;
     min-width: 50px;
     min-height: 50px;
+    background-color: rgb(174, 179, 174);
 }
 .buttons button {
     padding: 5px;
     content: "";
     height: 80px;
     width: 80px;
+    background-color: rgb(174, 179, 174);
 }
