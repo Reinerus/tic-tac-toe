@@ -49,6 +49,10 @@ body {
     text-decoration: underline;
 }
 
+.tiesbox{
+    display: inline-block;
+}
+
 .keypad
 {
     border: 2px solid black;
