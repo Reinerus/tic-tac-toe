@@ -40,3 +40,21 @@ body {
     font-size: 10px;
     text-decoration: underline;
 }
+
+.keypad
+{
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-collapse: collapse;
+}
+
+.button
+{
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    font-size: 30px;
+    min-width: 50px;
+    min-height: 50px;
+}
