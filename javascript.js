@@ -227,8 +227,8 @@ function check(idName) // Checks if there are any tic tac toes
     // Tiebreaker
     else if (allButtonsFilled())
     {
-        console.log(document.getElementById(idName).innerHTML, "TIE")
-        document.getElementById("tie").innerHMTL = Number(document.getElementById("tie").innerHTML) + 1;
+        console.log(document.getElementById("ties").innerHTML, "TIE")
+        document.getElementById("ties").innerHTML = Number(document.getElementById("ties").innerHTML) + 1;
         resetButtons()
     }
 }
