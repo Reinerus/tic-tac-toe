@@ -42,6 +42,8 @@ function setShape(x, idName) // Takes in the button and it's idName and changes 
 
         else if (idName == "9")
         {buttons[2][2] == "X"}
+
+        playerTurn = 2;
     }
 
     else if (playerTurn == 2)
@@ -74,6 +76,8 @@ function setShape(x, idName) // Takes in the button and it's idName and changes 
 
         else if (idName == "9")
         {buttons[2][2] == "O"}
+
+        playerTurn = 1
     }
     
     check(idName)
