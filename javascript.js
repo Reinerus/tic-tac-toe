@@ -2,9 +2,9 @@ var playerTurn = 1;
 var playerOneScore = 0;
 var playerTwoScore = 0;
 var buttons = [
-    ["-", "-", "-"], 
-    ["-", "-", "-"],
-    ["-", "-", "-"]
+    [" ", " ", " "], 
+    [" ", " ", " "],
+    [" ", " ", " "]
 ]
 
 
@@ -94,13 +94,13 @@ function check(idName) // Checks if there are any tic tac toes
         console.log(document.getElementById(idName).innerHTML, "ROW 1")
         if (document.getElementById(idName).innerHTML == "X")
         {
-            playerOneScore++;
+            document.getElementById("player1").innerHTML = Number(document.getElementById("player1").innerHTML) + 1;
             resetButtons()
         }
 
         else
         {
-            playerTwoScore++;
+            document.getElementById("player2").innerHTML = Number(document.getElementById("player2").innerHTML) + 1;
             resetButtons()
         }
     }
@@ -111,13 +111,13 @@ function check(idName) // Checks if there are any tic tac toes
         console.log(document.getElementById(idName).innerHTML, "ROW 2")
         if (document.getElementById(idName).innerHTML == "X")
         {
-            playerOneScore++;
+            document.getElementById("player1").innerHTML = Number(document.getElementById("player1").innerHTML) + 1;
             resetButtons()
         }
 
         else
         {
-            playerTwoScore++;
+            document.getElementById("player2").innerHTML = Number(document.getElementById("player2").innerHTML) + 1;
             resetButtons()
         }
     }
@@ -128,13 +128,13 @@ function check(idName) // Checks if there are any tic tac toes
         console.log(document.getElementById(idName).innerHTML, "ROW 3")
         if (document.getElementById(idName).innerHTML == "X")
         {
-            playerOneScore++;
+            document.getElementById("player1").innerHTML = Number(document.getElementById("player1").innerHTML) + 1;
             resetButtons()
         }
 
         else
         {
-            playerTwoScore++;
+            document.getElementById("player2").innerHTML = Number(document.getElementById("player2").innerHTML) + 1;
             resetButtons()
         }
     }
@@ -145,13 +145,13 @@ function check(idName) // Checks if there are any tic tac toes
         console.log(document.getElementById(idName).innerHTML, "VERTICAL 1")
         if (document.getElementById(idName).innerHTML == "X")
         {
-            playerOneScore++;
+            document.getElementById("player1").innerHTML = Number(document.getElementById("player1").innerHTML) + 1;
             resetButtons()
         }
 
         else
         {
-            playerTwoScore++;
+            document.getElementById("player2").innerHTML = Number(document.getElementById("player2").innerHTML) + 1;
             resetButtons()
         }
     }
@@ -162,13 +162,13 @@ function check(idName) // Checks if there are any tic tac toes
         console.log(document.getElementById(idName).innerHTML, "VERTICAL 2")
         if (document.getElementById(idName).innerHTML == "X")
         {
-            playerOneScore++;
+            document.getElementById("player1").innerHTML = Number(document.getElementById("player1").innerHTML) + 1;
             resetButtons()
         }
 
         else
         {
-            playerTwoScore++;
+            document.getElementById("player2").innerHTML = Number(document.getElementById("player2").innerHTML) + 1;
             resetButtons()
         }
     }
@@ -179,13 +179,13 @@ function check(idName) // Checks if there are any tic tac toes
         console.log(document.getElementById(idName).innerHTM, "VERTICAL 3")
         if (document.getElementById(idName).innerHTML == "X")
         {
-            playerOneScore++;
+            document.getElementById("player1").innerHTML = Number(document.getElementById("player1").innerHTML) + 1;
             resetButtons()
         }
 
         else
         {
-            playerTwoScore++;
+            document.getElementById("player2").innerHTML = Number(document.getElementById("player2").innerHTML) + 1;
             resetButtons()
         }
     }
@@ -196,13 +196,13 @@ function check(idName) // Checks if there are any tic tac toes
         console.log(document.getElementById(idName).innerHTML, "LEFT DIAGONAL")
         if (document.getElementById(idName).innerHTML == "X")
         {
-            playerOneScore++;
+            document.getElementById("player1").innerHTML = Number(document.getElementById("player1").innerHTML) + 1;
             resetButtons()
         }
 
         else
         {
-            playerTwoScore++;
+            document.getElementById("player2").innerHTML = Number(document.getElementById("player2").innerHTML) + 1;
             resetButtons()
         }
     }
@@ -213,15 +213,37 @@ function check(idName) // Checks if there are any tic tac toes
         console.log(document.getElementById(idName).innerHTML, "RIGHT DIAGONAL")
         if (document.getElementById(idName).innerHTML == "X")
         {
-            playerOneScore++;
+            document.getElementById("player1").innerHTML = Number(document.getElementById("player1").innerHTML) + 1;
             resetButtons()
         }
 
         else
         {
-            playerTwoScore++;
+            document.getElementById("player2").innerHTML = Number(document.getElementById("player2").innerHTML) + 1;
             resetButtons()
         }
+    }
+
+    // Tiebreaker
+    else if (allButtonsFilled())
+    {
+        console.log(document.getElementById(idName).innerHTML, "TIE")
+        //INCRIMENT TIE COUNTER HERE
+        resetButtons()
+    }
+}
+
+function allButtonsFilled()
+{
+
+    if ((buttons[0][0] != " ") && (buttons[0][1] != " ") && (buttons[0][2] != " ") && (buttons[1][0] != " ") && (buttons[1][1] != " ") && (buttons[1][2] != " ") && (buttons[2][0] != " ") && (buttons[2][1] != " ") && (buttons[2][2] != " "))
+    {
+        return true;
+    }
+
+    else
+    {
+        return false;
     }
 }
 
@@ -230,17 +252,17 @@ function resetButtons() // Sets all buttons back to "-" to signify emptyness
     console.log("RESETTING BUTTONS")
     for (let i = 0; i < document.body.getElementsByTagName("button").length; i++)
     {
-        console.log("Setting", document.body.getElementsByTagName("button")[i].innerHTML, "to ''" )
+        //console.log("Setting", document.body.getElementsByTagName("button")[i].innerHTML, "to ''" )
         document.body.getElementsByTagName("button")[i].innerHTML = ""
     }
-    buttons[0][0] = ""
-    buttons[0][1] = ""
-    buttons[0][2] = ""
-    buttons[1][0] = ""
-    buttons[1][1] = ""
-    buttons[1][2] = ""
-    buttons[2][0] = ""
-    buttons[2][1] = ""
-    buttons[2][2] = ""
-    console.log("FINAL BUTTONS:", buttons)
+    buttons[0][0] = " "
+    buttons[0][1] = " "
+    buttons[0][2] = " "
+    buttons[1][0] = " "
+    buttons[1][1] = " "
+    buttons[1][2] = " "
+    buttons[2][0] = " "
+    buttons[2][1] = " "
+    buttons[2][2] = " "
+    //console.log("FINAL BUTTONS:", buttons)
 }
