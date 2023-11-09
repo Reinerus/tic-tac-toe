@@ -16,3 +16,15 @@ body {
     text-align: center;
     background-color: white;
 }
+
+.scoreboard{
+    padding: 5px;
+    margin: 2px;
+    background-color: none;
+    justify-content: center;
+    align-items: center;
+}
+ #player1{
+    text-align: center;
+    border: solid 3px black;
+ }
