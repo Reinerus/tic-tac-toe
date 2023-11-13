@@ -12,7 +12,7 @@ function setShape(x, idName) // Takes in the button and it's idName and changes 
 {
     console.log("SETSHAPE:", x.innerHTML, idName)
 
-    if (playerTurn == 1 && (x.innerHTML != "X" && x.innerHTML != "O"))
+    if (playerTurn == 1 && (x.innerHTML != "X" && x.innerHTML != "O") && (victoryFlag == false))
     {
         x.innerHTML = "X"
 
@@ -46,7 +46,7 @@ function setShape(x, idName) // Takes in the button and it's idName and changes 
         playerTurn = 2;
     }
 
-    else if (playerTurn == 2 && (x.innerHTML != "X" && x.innerHTML != "O"))
+    else if (playerTurn == 2 && (x.innerHTML != "X" && x.innerHTML != "O") && (victoryFlag == false))
     {
         x.innerHTML = "O"
 
@@ -269,7 +269,6 @@ function check(idName) // Checks if there are any tic tac toes
     {
         console.log(document.getElementById("ties").innerHTML, "TIE")
         document.getElementById("ties").innerHTML = Number(document.getElementById("ties").innerHTML) + 1;
-        resetButtons()
     }
 }
 
