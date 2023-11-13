@@ -280,6 +280,7 @@ function check(idName) // Checks if there are any tic tac toes
         document.getElementById("7").style.backgroundColor = "gray"
         document.getElementById("8").style.backgroundColor = "gray"
         document.getElementById("9").style.backgroundColor = "gray"
+        victoryFlag = true;
     }
 }
 
