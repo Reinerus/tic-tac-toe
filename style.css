@@ -40,6 +40,7 @@ body {
 .player2 {
     padding: 10px 30px;
     background-color: lightblue;
+    margin: 40px;
     display: inline-block;
 }
 
@@ -50,6 +51,7 @@ body {
 
 .tiesbox{
     display: inline-block;
+    margin: 5px;
 }
 
 .keypad
