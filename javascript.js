@@ -271,6 +271,15 @@ function check(idName) // Checks if there are any tic tac toes
     {
         console.log(document.getElementById("ties").innerHTML, "TIE")
         document.getElementById("ties").innerHTML = Number(document.getElementById("ties").innerHTML) + 1;
+        document.getElementById("1").style.backgroundColor = "gray"
+        document.getElementById("2").style.backgroundColor = "gray"
+        document.getElementById("3").style.backgroundColor = "gray"
+        document.getElementById("4").style.backgroundColor = "gray"
+        document.getElementById("5").style.backgroundColor = "gray"
+        document.getElementById("6").style.backgroundColor = "gray"
+        document.getElementById("7").style.backgroundColor = "gray"
+        document.getElementById("8").style.backgroundColor = "gray"
+        document.getElementById("9").style.backgroundColor = "gray"
     }
 }
 
