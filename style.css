@@ -40,7 +40,6 @@ body {
 .player2 {
     padding: 10px 30px;
     background-color: lightblue;
-    margin: 40px;
     display: inline-block;
 }
 
@@ -58,20 +57,31 @@ body {
     border: 2px solid black;
     border-collapse: collapse;
 }
-
-.buttons
-{
-    padding: 15px;
+.buttons {
     border: 2px solid black;
-    font-size: 30px;
+    height: fit-content;
+    font-size: px;
     min-width: 50px;
     min-height: 50px;
     background-color: rgb(174, 179, 174);
 }
 .buttons button {
-    padding: 5px;
+    padding: 15px;
     content: "";
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     background-color: rgb(174, 179, 174);
+}
+
+.resets p {
+    padding: 5px ;
+    margin: 10px;
+    float: right;
+    border: 2px solid black;
+    width: fit-content;
+}
+
+.resets p:hover{
+    cursor: pointer;
+    background-color: darkgrey;
 }
