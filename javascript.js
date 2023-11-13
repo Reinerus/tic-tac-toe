@@ -267,9 +267,10 @@ function check(idName) // Checks if there are any tic tac toes
     }
 
     // Tiebreaker
-    else if (allButtonsFilled())
+    else if ((allButtonsFilled()) && (victoryFlag == false))
     {
         console.log(document.getElementById("ties").innerHTML, "TIE")
+        
         document.getElementById("ties").innerHTML = Number(document.getElementById("ties").innerHTML) + 1;
         document.getElementById("1").style.backgroundColor = "gray"
         document.getElementById("2").style.backgroundColor = "gray"
@@ -280,6 +281,7 @@ function check(idName) // Checks if there are any tic tac toes
         document.getElementById("7").style.backgroundColor = "gray"
         document.getElementById("8").style.backgroundColor = "gray"
         document.getElementById("9").style.backgroundColor = "gray"
+
         victoryFlag = true;
     }
 }
