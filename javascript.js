@@ -15,6 +15,7 @@ function setShape(x, idName) // Takes in the button and it's idName and changes 
     if (playerTurn == 1 && (x.innerHTML != "X" && x.innerHTML != "O") && (victoryFlag == false))
     {
         x.innerHTML = "X"
+        x.style.color = "black"
 
         if (idName == "1")
         {buttons[0][0] = "X"}
@@ -49,6 +50,7 @@ function setShape(x, idName) // Takes in the button and it's idName and changes 
     else if (playerTurn == 2 && (x.innerHTML != "X" && x.innerHTML != "O") && (victoryFlag == false))
     {
         x.innerHTML = "O"
+        x.style.color = "black"
 
         if (idName == "1")
         {buttons[0][0] = "O"}
@@ -292,8 +294,9 @@ function resetButtons() // Sets all buttons back to "-" to signify emptyness
     for (let i = 0; i < document.body.getElementsByTagName("button").length; i++)
     {
         //console.log("Setting", document.body.getElementsByTagName("button")[i].innerHTML, "to ''" )
-        document.body.getElementsByTagName("button")[i].innerHTML = ""
-        document.body.getElementsByTagName("button")[i].backgroundColor = "rgb(174, 179, 174)"
+        document.body.getElementsByTagName("button")[i].innerHTML = "-"
+        document.body.getElementsByTagName("button")[i].style.color = "mintcream"
+        document.body.getElementsByTagName("button")[i].style.backgroundColor = "mintcream"
     }
     buttons[0][0] = " "
     buttons[0][1] = " "
