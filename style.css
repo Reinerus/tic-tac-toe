@@ -66,11 +66,12 @@ body {
     background-color: rgb(174, 179, 174);
 }
 .buttons button {
+    color: mintcream;
     padding: 15px;
     content: "";
     height: 100px;
     width: 100px;
-    background-color: rgb(174, 179, 174);
+    background-color: mintcream;
 }
 
 .resets p {
